@@ -8,6 +8,7 @@ service: custom-token-generator
 provider:
   name: aws
   runtime: nodejs20.x
+  region: ap-northeast-2
 
 functions:
   hello:
@@ -15,4 +16,4 @@ functions:
     events:
       - httpApi:
           path: /
-          method: get
+          method: post
